@@ -2,7 +2,7 @@ export function Intro() {
   return (
     <section className="flex-col flex items-center  mt-16 mb-32 ">
       <h1 className="text-5xl font-bold leading-normal tracking-normal">
-        Hi, I'm Ryota. <br /> I'm a college student majoring Art and Computer
+        Hi, I'm Ryota. <br /> A college student majoring Art and Computer
         Science
       </h1>
       <h4 className="text-lg mt-8 leading-normal">
