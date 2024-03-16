@@ -7,6 +7,7 @@ import DateFormatter from "./date-formatter";
 type Props = {
   title: string;
   coverImage: string;
+  projectDate: string;
   date: string;
   excerpt: string;
   author: Author;
@@ -16,6 +17,7 @@ type Props = {
 export function PostPreview({
   title,
   coverImage,
+  projectDate,
   date,
   excerpt,
   author,
@@ -36,6 +38,7 @@ export function PostPreview({
             {title}
           </Link>
         </h3>
+        <div className="text-sm ">{projectDate}</div>
         <div className="text-lg mb-4"></div>
         <p className="text-sm leading-relaxed mb-4">{excerpt}</p>
       </div>

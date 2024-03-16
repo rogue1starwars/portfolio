@@ -17,6 +17,7 @@ export function MoreStories({ posts }: Props) {
             key={post.slug}
             title={post.title}
             coverImage={post.coverImage}
+            projectDate={post.projectDate}
             date={post.date}
             author={post.author}
             slug={post.slug}
