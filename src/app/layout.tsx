@@ -2,6 +2,7 @@ import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import 'zenn-content-css';
 
 import "./globals.css";
 
@@ -57,7 +58,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className="min-h-screen">{children}</div>
-        <Footer />
       </body>
     </html>
   );
