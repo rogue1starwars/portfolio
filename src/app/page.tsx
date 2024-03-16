@@ -19,6 +19,7 @@ export default function Index() {
         {morePosts.length > 0 && <MoreStories posts={allPosts} />}
         <Skills />
       </Container>
+      <img src="assets/blog/preview/cover.jpg" alt="Wasa Rocket Project" />
     </main>
   );
 }
