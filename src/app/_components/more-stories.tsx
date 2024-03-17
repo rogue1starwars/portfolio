@@ -1,5 +1,6 @@
 import { Post } from "@/interfaces/post";
 import { PostPreview } from "./post-preview";
+import Link from "next/link";
 
 type Props = {
   posts: Post[];
@@ -22,6 +23,7 @@ export function MoreStories({ posts }: Props) {
             excerpt={post.excerpt}
           />
         ))}
+        <Link href="/posts/others" className="font-semibold text-gray-600 hover:underline text-right mt-[-36px]">More Projects</Link>
       </div>
     </section>
   );
