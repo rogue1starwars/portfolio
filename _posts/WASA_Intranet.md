@@ -3,7 +3,8 @@ title: "WASA_Intranet"
 excerpt: "
 Creating an interactive web application to facilitate equipment management for our robot projects."
 coverImage: "/assets/projects/wasa_intranet(2024)/cover.png"
-projectDate: Currently working
+projectDate: "Currently working"
+skills: "Javascript/Typescript/React/Next.js/Redux"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---

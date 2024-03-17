@@ -28,6 +28,7 @@ export default async function Post({ params }: Params) {
             coverImage={post.coverImage}
             projectDate={post.projectDate}
             date={post.date}
+            skills={post.skills}
             author={post.author}
           />
           <PostBody content={content} />

@@ -4,6 +4,7 @@ projectDate: "SEP 2023"
 excerpt: "Implemented a self-driving probe leveraging Arduino, image recognition, GPS, and related technologies."
 coverImage: "/assets/projects/wasa_rocket_project(2023)/cover.png"
 date: "2020-03-16T05:35:07.322Z"
+skills: Arduino/ESP32/C/C++
 ogImage:
   url: "/assets/projects/wasa_rocket_project(2023)/cover.png"
 ---

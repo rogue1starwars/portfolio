@@ -5,6 +5,7 @@ export type Post = {
   title: string;
   projectDate: string;
   date: string;
+  skills: string;
   coverImage: string;
   author: Author;
   excerpt: string;
