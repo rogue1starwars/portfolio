@@ -29,7 +29,7 @@ export function PostPreview({
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <div className="basis-2/3 ml-3">
-        <h3 className="text-lg  leading-snug">
+        <h3 className="text-lg font-semibold leading-snug">
           <Link
             as={`/posts/${slug}`}
             href="/posts/[slug]"
@@ -38,8 +38,8 @@ export function PostPreview({
             {title}
           </Link>
         </h3>
-        <div className="text-sm ">{projectDate}</div>
-        <div className="text-lg mb-4"></div>
+        <div className="text-sm font-bold text-gray-500 ">{projectDate}</div>
+        <div className="text-lg mb-2"></div>
         <p className="text-sm leading-relaxed mb-4">{excerpt}</p>
       </div>
     </div>

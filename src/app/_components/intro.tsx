@@ -5,7 +5,7 @@ export function Intro() {
         Hi, I'm Ryota. <br /> A college student majoring Art and Computer
         Science
       </h1>
-      <h4 className="text-lg mt-8 leading-normal">
+      <h4 className="text-lg mt-8 tracking-wide leading-normal text-gray-500 font-semibold">
         As a software engineer specializing in robotics and web development, I
         possess over 4 years of experience in robotic software development, with
         a focus on computer vision. Additionally, I have expertise in web

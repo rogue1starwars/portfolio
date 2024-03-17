@@ -3,7 +3,8 @@ import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
-import { Skills } from "./_components/skills";
+import Skills from "./_components/skills";
+import Contact from "./_components/contact";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -18,6 +19,7 @@ export default function Index() {
         <Intro />
         {morePosts.length > 0 && <MoreStories posts={allPosts} />}
         <Skills />
+        <Contact />
       </Container>
     </main>
   );
