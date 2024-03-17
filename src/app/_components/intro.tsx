@@ -1,7 +1,7 @@
 export function Intro() {
   return (
     <section className="flex-col flex items-center  mt-16 mb-32 ">
-      <h1 className="text-5xl font-bold leading-normal tracking-normal">
+      <h1 className="md:text-5xl text-3xl font-bold leading-normal tracking-normal">
         Hi, I'm Ryota. <br /> A college student majoring Art and Computer
         Science
       </h1>
