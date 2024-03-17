@@ -15,7 +15,7 @@ We presented our project at the Noshiro Space event in Akita, Japan.
 
 The core computing system for the probe is Arduino, to which we integrated a GPS module, a 9-axis sensor, a pressure sensor, a camera, an SD card, and 2 DC motors.
 
-![wasa flow chart](</assets/projects/wasa_rocket_project(2023)/cansat_hardware.svg#center>)
+![wasa cansat flow chart](</assets/projects/wasa_rocket_project(2023)/cansat_hardware.svg#center>)
 
 ## SOFTWARE
 
