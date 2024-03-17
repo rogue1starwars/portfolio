@@ -5,6 +5,7 @@ import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 import Skills from "./_components/skills";
 import Contact from "./_components/contact";
+import Footer from "./_components/footer";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -21,6 +22,7 @@ export default function Index() {
         <Skills />
         <Contact />
       </Container>
+      <Footer />
     </main>
   );
 }

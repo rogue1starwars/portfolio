@@ -19,7 +19,7 @@ export function PostHeader({ title, coverImage, date, author, projectDate }: Pro
         <CoverImage title={title} src={coverImage} />
       </div>
       <PostTitle>{title}</PostTitle>
-      <div className="mb-6 text-lg">
+      <div className="mb-6 text-lg font-semibold text-gray-600">
         {projectDate}
         {/* <DateFormatter dateString={date} /> */}
       </div>
