@@ -7,6 +7,7 @@ projectDate: "Currently working"
 skills: "Javascript/Typescript/React/Next.js/Redux"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
+link: "https://github.com/rogue1starwars/wasa_intranet"
 ---
 
 I am primarily responsible for designing the UI and developing the front-end using Next.js for a new web application aimed at managing the equipment utilized in robot production. This project addresses the challenges of storage management, which often becomes disorganized and cumbersome over time.

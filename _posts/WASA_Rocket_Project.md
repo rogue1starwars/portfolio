@@ -7,6 +7,7 @@ date: "2020-03-16T05:35:07.322Z"
 skills: Arduino/ESP32/C/C++
 ogImage:
   url: "/assets/projects/wasa_rocket_project(2023)/cover.png"
+link: "https://github.com/wasa-cansat/piyopiyo"
 ---
 
 I participated in the development of a self-driving probe as part of a collaborative team, including integrating GPS, computer vision, and 9-axis sensors to reach a specific goal. I was responsible for circuit construction and programming for the 9-axis sensor, SD card, and AI vision camera.

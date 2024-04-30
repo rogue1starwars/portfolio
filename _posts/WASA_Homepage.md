@@ -7,6 +7,8 @@ projectDate: "MAR 2024"
 skills: "Javascript/Typescript/React/Next.js/microCMS"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
+link: "https://github.com/wasa-rocket/website"
+
 ---
 
 I was responsible for creating the frontend UI design and implementation with Next.js. I also created the 'Posts' section where users can add blog posts using microCMS.
