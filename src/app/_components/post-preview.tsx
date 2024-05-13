@@ -21,7 +21,7 @@ export function PostPreview({
 }: Props) {
   return (
     <div className="flex sm:flex-row flex-col">
-      <div className="basis-1/3 flex-initial mb-8">
+      <div className="basis-1/3 flex-initial mb-8 h-full">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <div className="basis-2/3 ml-3">
