@@ -1,25 +1,31 @@
 ---
-title: "Pose Estimator"
+title: "Sketch Search"
 excerpt: "Creating a pose estimator for illustration sketches"
 coverImage: "/assets/projects/Pose_Estimator/cover.png"
-projectDate: "Currently working"
-skills: "PyTorch/Python/Machine Learning"
+projectDate: "AUG 2024"
+skills: "Electron/ONNX/PyTorch/Python/Machine Learning"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
-link: "https://github.com/yamanoko/sketch_pose/blob/master/finetune_sketch.ipynb"
+link: "https://github.com/rogue1starwars/sketch-search"
 ---
 
-I am creating a Deep Learning model for pose estimation of illustration sketches with the cooperation of [yamanoko](https://github.com/yamanoko/). The purpose of this project to eventually create a pose-based image retrieval software which can associate images even from rough sketches.
+Sketch Search is a desktop application designed to help artists find image references from rough sketches. Reference searching is one of the most important but challenging processes when creating illustrations, animations, videos, and other creative projects. This software performs an image retrieval task using a pose estimation model and returns images relevant to the given sketch.
+
+The main goal of this project is to use technology to make creative work, such as illustration and video creation, easier and more enjoyable.
 
 ## OVERVIEW
 
-![wasa homepage overview](/assets/projects/Pose_Estimator/overview.png)
+![Overview of Sketch Search](/assets/projects/Pose_Estimator/overview.png)
 
-We used the Facebook's [Detectron2](https://ai.meta.com/tools/detectron2/) keypoint estimation model, and fine-tuned the model for illustration rough sketches.
+Using a fine-tuned YOLO v8 Pose Estimation model to estimate poses for animation illustrations, Sketch Search can accurately estimate poses from a given illustration. Based on these poses, it then runs a nearest neighbors search to find similar image references.
 
-We first fine-tuned the model with a large dataset including keypoint annotations for illustrations. After fine-tuning the model with illustrations, we then tuned the model with 20 rough sketches so that the model can create annotations even from sketches.
+The application runs entirely on-device, meaning no data is sent over the Internet.
 
-## Datasets
+## TECHNOLOGY
+
+Sketch Search is a native desktop application built with Electron. Thanks to Electron's high compatibility across multiple operating systems, it has the potential to run on any computer (though it currently supports only Windows). For the machine learning model, it uses ONNX Runtime Node to run the model locally with Node.js. Image preprocessing and postprocessing were the most challenging aspects of this project, especially since Node.js was used instead of Python, which is more commonly employed for machine learning tasks.
+
+## DATASETS
 
 ![retrieval figure from Bizarre Pose Estimation](/assets/projects/Pose_Estimator/retrieval_figure.png)
 Source: [Bizarre Pose Estimator Model](https://github.com/ShuhongChen/bizarre-pose-estimator)
@@ -27,24 +33,16 @@ Source: [Bizarre Pose Estimator Model](https://github.com/ShuhongChen/bizarre-po
 First we tuned the model with a COCO-compliant illustration dataset with annotations, provided from the [Bizarre Pose Estimator Model](https://github.com/ShuhongChen/bizarre-pose-estimator).
 After fine-tuning the model with the dataset provided from the Bizarre Pose Estimator, we then tuned the model with our custom dataset, which includes 20 rough sketch illustrations with annotations.
 
-## Future plans
+## DOWNLOAD
 
-There are several future plans for this project.
+You can download the latest version of Sketch Search from GitHub Releases. [Open Releases](https://github.com/rogue1starwars/sketch-search/releases).
 
-### 1. Create algorithm to associate images from keypoints
+## USAGE
 
-Our goal is to create a software where users can search image references from rough sketches. We created a model to annotate keypoints from rough sketches, but we have not completed the algorithm to find similar image from the keypoint information. We are now working on calculating the distances between each keypoints.
+![Usage image](/assets/projects/Pose_Estimator/usage.png)
 
-### 2. Test with other models.
+In this application, you can upload two types of images: reference images and sketch images. Reference images are those you want to store within the application.
 
-We initialy created the model by fine-tuning the Detectron2 rcnn model, but we are currently testing with other rcnn models, such as the [PyTorch official keypoint rcnn model](https://pytorch.org/vision/main/models/keypoint_rcnn.html).
+When you first use the application, you need to upload reference images that you own. These are the images you will search through later. Once an image is uploaded, the application automatically runs the pose estimation model and stores the estimated pose data in local storage.
 
-Although Detectron2 is an easy-to-use framework for keypoint detection, it is difficult to customize. On the other hand, the PyTorch keypoint rcnn model is a relatively simple model, allowing users to change the backbone of the model.
-
-### 3. Deploy the model to a Flask application.
-
-We currently have not deployed the model yet, so we are planning to create a Flask application and create a dockerfile so that users can easily use our model for content creation.
-
-### 4. Provide a larger dataset for rough sketches
-
-We created a dataset with 20 rough sketches with keypoint annotations. Because we first fine-tuned the model with the illustration dataset provided by the [Bizarre Pose Estimator Model](https://github.com/ShuhongChen/bizarre-pose-estimator), the model was capable of estimating keypoints from rough sketches even with small amount of data. However, we are planning to create a larger dataset for rough sketches in order to improve the accuracy of our model.
+After uploading all your reference images, you can begin searching. Upload a sketch image, and the application will quickly find similar reference images that you previously uploaded.
